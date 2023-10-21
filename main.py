@@ -47,8 +47,8 @@ class Button():
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
 
-        if x < mouse[0] < x + self.widht and y < mouse[1] < y + self.height:
-            pygame.draw.rect(win, self.active_clr, (x, y, self.widht, self.height))
+        if x < mouse[0] < x + self.width and y < mouse[1] < y + self.height:
+            pygame.draw.rect(win, self.active_clr, (x, y, self.width, self.height))
 
             if click[0] == 1:
                 pygame.mixer.Sound.play(button_sound)
@@ -56,7 +56,7 @@ class Button():
                 if action is not None:
                     action()
         else:
-            pygame.draw.rect(win, self.inactive_clr, (x, y, self.widht, self.height))
+            pygame.draw.rect(win, self.inactive_clr, (x, y, self.width, self.height))
 
         print_text(message=message, x=x+10, y=-y+10, font_size=font_size)
 
@@ -112,8 +112,6 @@ while(run):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-
-
 
 
     win.blit(background, (0, 0))
