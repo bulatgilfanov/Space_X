@@ -90,4 +90,19 @@ class Laser():
                     if gameplay:
                         mouse = pygame.mouse.get_pos()
                     if restart_label_rect.collidepoint(mouse) and pygame.mouse.get_pressed()[0]:
-                        gampelay = False
+
+                        def start_game():
+
+                            run = True
+                            while (run):
+                                for event in pygame.event.get():
+                                    if event.type == pygame.QUIT:
+                                        run = False
+
+                                        def start_game():
+
+                                            run = True
+                                            while (run):
+                                                for event in pygame.event.get():
+                                                    if event.type == pygame.QUIT:
+                                                        run = False

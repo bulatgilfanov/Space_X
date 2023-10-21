@@ -2,29 +2,29 @@ import pygame
 import random
 
 pygame.init()
-win = pygame.display.set_mode((1000, 700))
+win = pygame.display.set_mode((1500, 1000))
 
 pygame.mixer.music.load("sound/Vandeta.mp3")
 pygame.mixer.music.play(-1)
 lose = pygame.image.load("fon/lose.jpg")
+lose_size = (1500, 1000)
+lose = pygame.transform.scale(lose, (lose_size[0], lose_size[1]))
 menu = pygame.image.load("fon/menu.jpg")
 player = pygame.image.load("sprites/ship.png")
 player_size = (250,250)
 player = pygame.transform.scale(player, (player_size[0], player_size[1]))
 background = pygame.image.load("fon/space.jpg")
 button_sound = pygame.mixer.Sound("sound/click.mp3")
-laser = pygame.image.load("sprites/laserRed.png")
 enemy = pygame.image.load("sprites/meteorBrown.png")
 enemy_size = (100, 100)
 enemy = pygame.transform.scale(enemy, (enemy_size[0], enemy_size[1]))
 
 
-x = 350
-y = 500
+x = 650
+y = 700
 speed = 5
 
 clock = pygame.time.Clock()
-
 
 def start_game():
 
@@ -99,14 +99,17 @@ def show_menu():
                 pygame.quit()
                 quit()
 
-        win.blit(menu, (0, 0))
-        start_btn.draw(300, 200, "Start game", start_game, 50)
+    win.blit(menu, (0, 0))
+    start_btn.draw(300, 200, "Start game", start_game, 50)
 
-        pygame.display.update()
-        clock.tick(60)
+    pygame.display.update()
+    clock.tick(60)
+
+
 
 run = True
 while(run):
+
 
     clock.tick(60)
     for event in pygame.event.get():
@@ -115,6 +118,8 @@ while(run):
 
 
     win.blit(background, (0, 0))
+
+
 
     keys = pygame.key.get_pressed()
 
@@ -128,11 +133,14 @@ while(run):
         y += speed
 
 
+
     win.blit(player,( x, y))
 
     seconds = (pygame.time.get_ticks() - start_ticks) / 1000  # calculate how many seconds
     if seconds > 2:
         start_ticks = pygame.time.get_ticks()  # starter tick
+
+
 
 
         color = random.choices(range(256), k=3)
@@ -146,7 +154,6 @@ while(run):
         list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
 
 
-
     player_rect = pygame.Rect((x + 45, y), (90, 60))
 
     for i in list_circles:
@@ -157,6 +164,6 @@ while(run):
         i.horizontal_movement()
 
 
-    pygame.display.update()
 
+    pygame.display.update()
 
