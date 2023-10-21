@@ -38,7 +38,7 @@ def start_game():
 class Button():
 
     def __init__(self, width, height):
-        self.widht = width
+        self.width = width
         self.height = height
         self.inactive_clr = (13, 162, 58)
         self.active_clr = (23, 204, 58)
