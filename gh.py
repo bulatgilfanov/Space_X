@@ -198,14 +198,21 @@ while(run):
             start_ticks = pygame.time.get_ticks()  # starter tick
 
     color = random.choices(range(256), k=3)
-    list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-    list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-    list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-    list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-    list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-    list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-    list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-    list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+    list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+
 
 
     player_rect = pygame.Rect((x + 45, y), (90, 60))

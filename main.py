@@ -4,7 +4,7 @@ import random
 pygame.init()
 win = pygame.display.set_mode((1500, 1000))
 
-pygame.mixer.music.load("sound/Vandeta.mp3")
+pygame.mixer.music.load("sound/Vandeta.mp3e.mp3")
 pygame.mixer.music.play(-1)
 lose = pygame.image.load("fon/lose.jpg")
 lose_size = (1500, 1000)
@@ -144,14 +144,20 @@ while(run):
 
 
         color = random.choices(range(256), k=3)
-        list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-        list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-        list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-        list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-        list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-        list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-        list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
-        list_circles.append(Circle(win, color, random.randint(0, 1000), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
 
 
     player_rect = pygame.Rect((x + 45, y), (90, 60))
