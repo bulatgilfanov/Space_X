@@ -26,14 +26,17 @@ speed = 5
 
 clock = pygame.time.Clock()
 
+def get_font(size):  # Returns Press-Start-2P in the desired size
+    return pygame.font.Font("assets/font.ttf", size)
+
+
 def start_game():
 
     run = True
-    while(run):
+    while (run):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-
 
 class Button():
 
@@ -77,7 +80,7 @@ class Circle():
     def horizontal_movement(self):
         self.y += self.vel
 
-def print_text(message, x, y, font_color=(0, 0, 0), font_type='gabriola', font_size=30):
+def print_text(message, x, y, font_color=(0, 0, 0), font_type='font.ttf', font_size=30):
     font_type = pygame.font.Font(font_type, font_size)
     text = font_type.render(message,True, font_color)
     win.blit(text, (x, y))
@@ -104,6 +107,8 @@ def show_menu():
 
     pygame.display.update()
     clock.tick(60)
+
+
 
 
 
@@ -157,7 +162,7 @@ while(run):
         list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
         list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
         list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
-        list_circles.append(Circle(win, color, random.randint(0, 1500), 0))
+
 
 
     player_rect = pygame.Rect((x + 45, y), (90, 60))

@@ -9,5 +9,7 @@ screamer = pygame.transform.scale(screamer, (screamer_size[0], screamer_size[1])
 
 
 def screamer():
-    win.blit(screamer(0, 0))
+    win.blit(screamer, (0, 0))
+
+
 
