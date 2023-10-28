@@ -4,7 +4,7 @@ import random
 pygame.init()
 win = pygame.display.set_mode((1500, 1000))
 
-pygame.mixer.music.load("sound/Vandeta.mp3e.mp3")
+pygame.mixer.music.load("sound/Vandeta.mp3")
 pygame.mixer.music.play(-1)
 lose = pygame.image.load("fon/lose.jpg")
 lose_size = (1500, 1000)
